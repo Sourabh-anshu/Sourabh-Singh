@@ -1,0 +1,105 @@
+{{ 'three-part-section.css' | asset_url | stylesheet_tag }}
+
+<div class="three-part-section">
+  <div class="header-section">
+    <div class="header-part">
+      <h2 style="color: {{ section.settings.header_text_color }}">{{ section.settings.header_1 }}</h2>
+    </div>
+    <div class="header-part">
+      <h2 style="color: {{ section.settings.header_text_color }}">{{ section.settings.header_2 }}</h2>
+    </div>
+    <div class="header-part">
+      <h2 style="color: {{ section.settings.header_text_color }}">{{ section.settings.header_3 }}</h2>
+    </div>
+  </div>
+
+  <div class="body-section">
+    {{ section.settings.body_content }}
+  </div>
+
+  <div class="footer-section">
+    <div style="color: {{ section.settings.footer_text_color }}">
+      {{ section.settings.footer_content }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Three Part Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header Settings"
+    },
+    {
+      "type": "text",
+      "id": "header_1",
+      "label": "First Header",
+      "default": "Header 1"
+    },
+    {
+      "type": "text",
+      "id": "header_2",
+      "label": "Second Header",
+      "default": "Header 2"
+    },
+    {
+      "type": "text",
+      "id": "header_3",
+      "label": "Third Header",
+      "default": "Header 3"
+    },
+    {
+      "type": "color",
+      "id": "header_bg_color",
+      "label": "Header Background Color",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "header_text_color",
+      "label": "Header Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Body Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "body_content",
+      "label": "Body Content",
+      "default": "<p>Add your body content here</p>"
+    },
+    {
+      "type": "header",
+      "content": "Footer Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "footer_content",
+      "label": "Footer Content",
+      "default": "<p>Add your footer content here</p>"
+    },
+    {
+      "type": "color",
+      "id": "footer_bg_color",
+      "label": "Footer Background Color",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "color",
+      "id": "footer_text_color",
+      "label": "Footer Text Color",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Three Part Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

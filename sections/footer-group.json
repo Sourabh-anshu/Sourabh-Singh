@@ -55,7 +55,6 @@
             "border_width": 1,
             "border_opacity": 100,
             "border_radius": 0,
-            "placeholder": "",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
@@ -95,7 +94,6 @@
                 "border_width": 1,
                 "border_opacity": 100,
                 "border_radius": 0,
-                "placeholder": "",
                 "toggle_overlay": false,
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
@@ -207,7 +205,6 @@
               "type": "_footer-copyright",
               "static": true,
               "settings": {
-                "show_powered_by": true,
                 "font_size": "0.75rem",
                 "case": "none"
               },
@@ -285,7 +282,6 @@
         "group_tbFfTQ",
         "footer_utilities_KRaGcH"
       ],
-      "disabled": true,
       "name": "Footer",
       "settings": {
         "content_direction": "column",
