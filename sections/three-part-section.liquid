@@ -2,14 +2,16 @@
 
 <div class="three-part-section">
   <div class="header-section">
-    <div class="header-part">
-      <h2 style="color: {{ section.settings.header_text_color }}">{{ section.settings.header_1 }}</h2>
+    <div class="header-left">
+      <h2 style="color: {{ section.settings.header_text_color }}">{{ section.settings.header_title }}</h2>
     </div>
-    <div class="header-part">
-      <h2 style="color: {{ section.settings.header_text_color }}">{{ section.settings.header_2 }}</h2>
+    <div class="header-middle">
+      <p>{{ section.settings.header_description }}</p>
     </div>
-    <div class="header-part">
-      <h2 style="color: {{ section.settings.header_text_color }}">{{ section.settings.header_3 }}</h2>
+    <div class="header-right">
+      <a href="{{ section.settings.button_link }}" class="button">
+        {{ section.settings.button_text }}
+      </a>
     </div>
   </div>
 
@@ -34,21 +36,26 @@
     },
     {
       "type": "text",
-      "id": "header_1",
-      "label": "First Header",
-      "default": "Header 1"
+      "id": "header_title",
+      "label": "Header Title",
+      "default": "Main Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "header_description",
+      "label": "Header Description",
+      "default": "Add your description here"
     },
     {
       "type": "text",
-      "id": "header_2",
-      "label": "Second Header",
-      "default": "Header 2"
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Click Here"
     },
     {
-      "type": "text",
-      "id": "header_3",
-      "label": "Third Header",
-      "default": "Header 3"
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
     },
     {
       "type": "color",
